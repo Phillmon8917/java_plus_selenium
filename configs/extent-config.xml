@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <theme>DARK</theme>
+        <encoding>UTF-8</encoding>
+        <protocol>HTTPS</protocol>
+        <timelineEnabled>false</timelineEnabled>
+        <showPassPercent>true</showPassPercent>
+        <passPercentDecimalPlaces>2</passPercentDecimalPlaces>
+        <enableOfflineMode>false</enableOfflineMode>
+        <thumbnailForBase64>false</thumbnailForBase64>
+        <info>
+            <title>Custom text</title>
+            <value>Custom text value</value>
+        </info>
+        <documentTitle>Extent Framework</documentTitle>
+        <reportName><![CDATA[Extent Test Report]]></reportName>
+        <timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
+        <scripts>
+            <![CDATA[
+            $(document).ready(function() {
+                // Any custom scripts here
+            });
+            ]]>
+        </scripts>
+        <styles>
+            <![CDATA[
+                body, * {
+                    color: #ffffff !important;
+                    text-shadow: none !important;
+                }
+                .test-name, .node-name, .scenario-name, .category-name, .details, .timestamp, .step-details, td, th, span, a, p, div {
+                    color: #ffffff !important;
+                }
+                body, .test, .node, .test-content, .card-panel, .test-content-detail {
+                    background-color: #1a1a1a !important;
+                }
+                .pass-bg {
+                    background-color: #28a745 !important;
+                    color: #fff !important;
+                }
+                .fail-bg {
+                    background-color: #dc3545 !important;
+                    color: #fff !important;
+                }
+                .info-bg {
+                    background-color: #17a2b8 !important;
+                    color: #fff !important;
+                }
+            ]]>
+        </styles>
+    </configuration>
+</extentreports>
