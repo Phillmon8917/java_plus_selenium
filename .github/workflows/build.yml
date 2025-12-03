@@ -1,7 +1,7 @@
 name: build
 
 on:
-  workflow_dispatch:  # 👈 Enables manual trigger from GitHub UI
+  workflow_dispatch:
 
 jobs:
   run-tests:
@@ -18,10 +18,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up JDK 17
+      - name: Set up JDK 21
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: '21'
           distribution: 'temurin'
 
       - name: Build with Maven
@@ -30,7 +30,7 @@ jobs:
       - name: Run Tests
         run: mvn test
 
-      - name: Print environment variables (for debug only)
+      - name: Print environment variables
         run: |
           echo "Username: $APP_USERNAME"
           echo "Email: $EMAILUSERNAME"
