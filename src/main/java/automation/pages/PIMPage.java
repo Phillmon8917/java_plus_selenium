@@ -177,7 +177,7 @@ public class PIMPage extends PIMBasePage
             throw new TimeoutException("Timed out waiting for dropdown options for '" + nationality + "'", e);
         } catch (Exception ex)
         {
-            throw new RuntimeException("Error selecting nationality '" + nationality + "'", ex);
+            log.error("Error selecting nationality '" + nationality + "'", ex);
         }
     }
 

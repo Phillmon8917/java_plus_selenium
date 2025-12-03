@@ -19,7 +19,7 @@
         <scripts>
             <![CDATA[
             $(document).ready(function() {
-                // Any custom scripts here
+                // Any custom scripts here, blue print for js
             });
             ]]>
         </scripts>

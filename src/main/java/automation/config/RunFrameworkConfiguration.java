@@ -22,5 +22,4 @@ public class RunFrameworkConfiguration
     {
         return new PropertySourcesPlaceholderConfigurer();
     }
-
 }

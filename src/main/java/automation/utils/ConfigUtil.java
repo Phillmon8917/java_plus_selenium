@@ -16,7 +16,6 @@ public class ConfigUtil
                     .load();
         } catch (Exception e)
         {
-            System.err.println("Failed to load .env file: " + e.getMessage());
             return null;
         }
     }
@@ -49,11 +48,17 @@ public class ConfigUtil
     private static String getEnv(String key)
     {
         String systemValue = System.getenv(key);
-        if (systemValue != null) return systemValue;
+        if (systemValue != null && !systemValue.isEmpty())
+        {
+            return systemValue;
+        }
         if (dotenv != null)
         {
             String envValue = dotenv.get(key);
-            if (envValue != null) return envValue;
+            if (envValue != null && !envValue.isEmpty())
+            {
+                return envValue;
+            }
         }
         return null;
     }
